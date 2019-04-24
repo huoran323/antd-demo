@@ -4,7 +4,13 @@ import { Layout, Menu, Icon } from "antd";
 const { Header, Sider, Content } = Layout;
 
 export default class MyHeader extends React.Component {
-  toggle = () => {};
+  state = {};
+
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  };
   render() {
     return (
       <div>
@@ -16,7 +22,7 @@ export default class MyHeader extends React.Component {
         >
           <Icon
             className="trigger"
-            type={this.props.collapsed ? "menu-unfold" : "menu-fold"}
+            type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
             onClick={this.toggle}
           />
         </Header>

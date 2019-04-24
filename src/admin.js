@@ -8,15 +8,15 @@ import MyHeader from "./components/Header";
 const { Header, Sider, Content } = Layout;
 
 export default class Admin extends React.Component {
-  state = {
-    collapsed: false
-  };
+  //   state = {
+  //     collapsed: false
+  //   };
 
-  handleToggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
+  //   handleToggle = () => {
+  //     this.setState({
+  //       collapsed: !this.state.collapsed
+  //     });
+  //   };
 
   render() {
     return (
