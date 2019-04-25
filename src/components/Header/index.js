@@ -4,13 +4,6 @@ import { Layout, Menu, Icon } from "antd";
 const { Header, Sider, Content } = Layout;
 
 export default class MyHeader extends React.Component {
-  state = {};
-
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
   render() {
     return (
       <div>
@@ -22,8 +15,11 @@ export default class MyHeader extends React.Component {
         >
           <Icon
             className="trigger"
-            type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
-            onClick={this.toggle}
+            type={this.props.collapsed ? "menu-unfold" : "menu-fold"}
+            onClick={() => {
+              //点击事件时，将子组件的点击事件传回给父组件，点击操作在父组件的事件中进行操作
+              this.props.toggle();
+            }}
           />
         </Header>
       </div>
