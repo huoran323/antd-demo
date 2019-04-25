@@ -28,7 +28,8 @@ export default class MyMenu extends Component {
               title={
                 <span>
                   <Icon type={item.type} />
-                  {item.title}
+                  {/* 此处的span控制缩进的时候不显示文字 */}
+                  <span>{item.title}</span>
                 </span>
               }
             >

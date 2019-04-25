@@ -1,12 +1,12 @@
 import React from "react";
-import { Layout, Menu, Icon } from "antd";
+import { Layout } from "antd";
 import "antd/dist/antd.css";
 import "./admin.less";
 
 import MyHeader from "./components/Header";
 import MyMenu from "./components/NavLeft";
 
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 export default class Admin extends React.Component {
   state = {
@@ -24,7 +24,12 @@ export default class Admin extends React.Component {
     return (
       <Layout className="main">
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-          <div className="logo" />
+          <div className="logo">
+            <a href="/">
+              <img src="/assets/logo-ant.svg" alt="" />
+              <h1>通用管理系统</h1>
+            </a>
+          </div>
           <MyMenu />
         </Sider>
         <Layout>

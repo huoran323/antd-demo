@@ -11,11 +11,26 @@
 }
 
 .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
+  height: 64px;
+  position: relaticve;
+  background: #002140;
+  padding-left: 24px;
+  line-height: 64px;
+  overflow: hidden; //折叠的时候隐藏
+  img {
+    vertical-align: middle;
+    height: 32px;
+    display: inline-block;
+  }
+  h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600px;
+    margin: 0 0 0 12px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
-
 .main {
   height: calc(100vh);
 }
