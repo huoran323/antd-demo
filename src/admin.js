@@ -37,7 +37,8 @@ export default class Admin extends React.Component {
             collapsed={this.state.collapsed}
             toggle={this.handleToggle}
           />
-          <Content
+          {this.props.children}
+          {/* <Content
             style={{
               margin: "24px 16px",
               padding: 24,
@@ -46,7 +47,7 @@ export default class Admin extends React.Component {
             }}
           >
             Content
-          </Content>
+          </Content> */}
         </Layout>
       </Layout>
     );
